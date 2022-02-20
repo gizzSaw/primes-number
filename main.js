@@ -2,6 +2,8 @@ let str = "";
 let arr = []; 
 let a, b, direction; 
 
+out();
+
 function isPrime(num) {
     for (let i = 2; i < num; i++) {
         if (num % i === 0) {
@@ -54,7 +56,7 @@ function outFromTwo() {
 
 function setDate() {
     do {
-        direction = parseInt(prompt(" 0- прямое направление, 1 - обратное направление"));
+        direction = parseInt(prompt("выберите 0 - прямое направление, 1 - обратное направление"));
     } while (direction !== 0 && direction !== 1) 
     
     do {
@@ -65,10 +67,11 @@ function setDate() {
     } while (arr.length > 2 || ((arr.length !== 1 || isNaN(a)) && (isNaN(a) || isNaN(b))))
 }
 
-
-setDate();
-if (arr.length == 1) {
-    outFromOne();
-} else {
-    outFromTwo();
+function out () {
+    setDate();
+    if (arr.length == 1) {
+        outFromOne();
+    } else {
+        outFromTwo();
+    }
 }
