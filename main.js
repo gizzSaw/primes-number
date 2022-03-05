@@ -42,7 +42,7 @@ function outFromTwo() {
     if (primes.length == 0) {
         console.log(`простых чисел не найдено`);
     } else if (primes.length == 1) {
-        console.log(`надйено всего ${primes.length} простое число`);
+        console.log(`найдено всего ${primes.length} простое число`);
     } else if (primes.length < 3) {
         console.log(`найдено лишь ${primes.length} простых числа`);
     }
